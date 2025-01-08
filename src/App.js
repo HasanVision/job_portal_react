@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import PostJob from './components/PostJob';
 import JobList from './components/JobList';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import SingleJob from './components/singleJob';
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<JobList />} />
                         <Route path="/post-job" element={<PostJob />} />
+                        <Route path="/job/:id" element={<SingleJob />} />
                     </Routes>
                 </div>
             </div>

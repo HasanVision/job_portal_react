@@ -12,7 +12,7 @@ CREATE TABLE `applications` (
     `job_id` INT(11) NOT NULL,
     `name` VARCHAR(255) NOT NULL,
     `email` VARCHAR(255) NOT NULL,
-    `resume` VARCHAR(255), -- Path to the uploaded resume file
+    `resume` VARCHAR(255),
     `cover_letter` TEXT,
     `status` ENUM('applied', 'shortlisted', 'rejected') DEFAULT 'applied',
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
