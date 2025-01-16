@@ -18,3 +18,12 @@ CREATE TABLE `applications` (
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (`job_id`) REFERENCES `jobs` (`id`) ON DELETE CASCADE
 );
+
+CREATE TABLE `users` (
+    `id` INT(11) AUTO_INCREMENT PRIMARY KEY,
+    `name` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL UNIQUE,
+    `password` VARCHAR(255) NOT NULL,
+    `role` ENUM('admin', 'employer', 'jobseeker') DEFAULT 'jobseeker',
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
